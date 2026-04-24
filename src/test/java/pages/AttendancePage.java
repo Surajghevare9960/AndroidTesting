@@ -17,13 +17,13 @@ public class AttendancePage {
     //Locators for the attendance Module
 
     @FindBy(xpath = "//android.widget.CheckedTextView[@resource-id=\"com.orange.payroll:id/design_menu_item_text\" and @text=\"Attendance\"]")
-    WebElement Attendance;
+    public WebElement Attendance;
 
     @FindBy (id="com.orange.payroll:id/refreshImgView")
-    WebElement Refreshbtn;
+    public WebElement Refreshbtn;
 
     @FindBy (id= "com.orange.payroll:id/tabMyAttendance")
-    WebElement Myattendance;
+    public WebElement Myattendance;
 
     @FindBy (id = "com.orange.payroll:id/tabTeamAttendance")
     WebElement Teamattendance;
@@ -38,13 +38,38 @@ public class AttendancePage {
     WebElement Applybtn ;
 
     @FindBy (xpath = "//android.widget.TextView[@resource-id=\"com.orange.payroll:id/txtvwEmpName\"]")
-    WebElement empname;
+    public WebElement empname;
 
     @FindBy (xpath = "//android.widget.TextView[@resource-id=\"com.orange.payroll:id/txtvwDeptName\"]")
-    WebElement deptname;
+    public WebElement deptname;
 
     @FindBy (xpath = "//android.widget.TextView[@resource-id=\"com.orange.payroll:id/totalMonthlyHours_tv\"]")
     WebElement totalmonthlyhour;
+
+    @FindBy (xpath = "//android.widget.ImageView[@resource-id=\"com.orange.payroll:id/imgvwDownArrow\"]")
+    public WebElement Regularizebtn;
+
+    @FindBy (xpath = "(//android.widget.TextView[@resource-id=\"com.orange.payroll:id/txtvwInTime\"])[1]")
+    public WebElement intime;
+
+    @FindBy (xpath = "(//android.widget.TextView[@resource-id=\"com.orange.payroll:id/txtvwOutTime\"])[1]")
+    public WebElement outtime;
+
+    @FindBy (xpath = "//android.widget.TextView[@resource-id=\"com.orange.payroll:id/txtvwDay\"]")
+    public WebElement Attendday;
+
+    @FindBy(xpath = "//android.widget.TextView[@resource-id=\"com.orange.payroll:id/txtvwDate\"]")
+    public WebElement Attenddate;
+
+    @FindBy (xpath="(//android.widget.TextView[@resource-id=\"com.orange.payroll:id/txtvwPdays\"])[1]")
+    public WebElement Presentday;
+
+    @FindBy(xpath= "(//android.widget.TextView[@resource-id=\"com.orange.payroll:id/txt1\"])[3]")
+    WebElement Presentstatus;
+
+    @FindBy (xpath = "//android.widget.RelativeLayout[@resource-id=\"com.orange.payroll:id/mapTrack_history_rl\"]/android.widget.ImageView")
+    WebElement MapTrackhistory;
+
 
 
 
