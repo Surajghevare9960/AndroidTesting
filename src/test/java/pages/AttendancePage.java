@@ -28,8 +28,25 @@ public class AttendancePage {
     @FindBy (id = "com.orange.payroll:id/tabTeamAttendance")
     WebElement Teamattendance;
 
+    @FindBy (xpath = "//android.widget.LinearLayout[@resource-id=\"com.orange.payroll:id/linearDate\"]/android.widget.LinearLayout[1]//android.widget.TextView")
+    WebElement Monthselection;
+
+    @FindBy (xpath = "//android.widget.LinearLayout[@resource-id=\"com.orange.payroll:id/linearDate\"]/android.widget.LinearLayout[2]//android.widget.TextView")
+    WebElement Yearselection;
+
     @FindBy (xpath= "//android.widget.Button[@resource-id=\"com.orange.payroll:id/buttonChange\"]")
     WebElement Applybtn ;
+
+    @FindBy (xpath = "//android.widget.TextView[@resource-id=\"com.orange.payroll:id/txtvwEmpName\"]")
+    WebElement empname;
+
+    @FindBy (xpath = "//android.widget.TextView[@resource-id=\"com.orange.payroll:id/txtvwDeptName\"]")
+    WebElement deptname;
+
+    @FindBy (xpath = "//android.widget.TextView[@resource-id=\"com.orange.payroll:id/totalMonthlyHours_tv\"]")
+    WebElement totalmonthlyhour;
+
+
 
     public AttendancePage (AndroidDriver driver) {
         this.driver = driver;
