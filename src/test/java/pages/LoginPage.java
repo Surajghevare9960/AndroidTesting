@@ -78,12 +78,14 @@ public class LoginPage {
 
             wait.until(ExpectedConditions.elementToBeClickable(serverBtn)).click();
 
-            wait.until(ExpectedConditions.visibilityOf(serverName)).sendKeys(sn);
+            WebElement serverField = wait.until(
+                    ExpectedConditions.visibilityOf(serverName));
+
+            serverField.click();
+            serverField.clear();
+            serverField.sendKeys(sn);
 
             wait.until(ExpectedConditions.elementToBeClickable(connectBtn)).click();
-
-            // WAIT for popup and click OK
-            //By okBtn = By.id("android:id/button3");
 
             wait.until(ExpectedConditions.elementToBeClickable(okbutton)).click();
         }

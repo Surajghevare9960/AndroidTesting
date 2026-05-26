@@ -1,45 +1,47 @@
 package tests;
 
-
+import Base.BaseTest;
+import Reusable_methods.Menu_drawer;
 import org.testng.Assert;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
-import pages.LoginPage;
 import pages.Clocking;
+import pages.LoginPage;
 
-public class ClockingTest extends Base.BaseTest {
+public class LeaveTest extends BaseTest {
 
     LoginPage loginPage;
-    Clocking clocking;
+    Menu_drawer menuDrawer;
 
     @BeforeMethod
     public void initPages() {
         loginPage = new LoginPage(driver);
-        clocking = new Clocking(driver);
+        menuDrawer = new Menu_drawer(driver);
+
     }
 
     @Test
-    public void verifyClockingFlow() throws Exception {
+    public void verifyLeaveNavigation() throws Exception {
 
         // =============================
         // LOGIN
         // =============================
-        loginPage.login("qamobile", "0065@suraj", "m5o0t5");
+        loginPage.login("qamobile", "0068@suraj", "m5o0t5");
 
         // =============================
         // NAVIGATION
         // =============================
-        clocking.navigateToClocking();
+        Clocking.navigateToClocking();
 
         // =============================
         // LOOP FLOW (SMART TOGGLE)
         // =============================
-        clocking.performClockingLoop(5);
+        Clocking.performClockingLoop(5);
 
         // =============================
         // FINAL VALIDATION
         // =============================
-        String finalStatus = clocking.getClockStatus().toLowerCase();
+        String finalStatus = Clocking.getClockStatus().toLowerCase();
         System.out.println("Final Status: " + finalStatus);
 
         Assert.assertTrue(

@@ -1,6 +1,7 @@
 package tests;
 
-import base.BaseTest;
+import Base.BaseTest;
+import io.appium.java_client.android.AndroidDriver;
 import org.testng.Assert;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
@@ -16,6 +17,7 @@ public class AttendanceTest extends BaseTest {
 
     @BeforeMethod
     public void initPages() {
+        //AndroidDriver driver = null;
         loginPage = new LoginPage(driver);
         menuDrawer = new Menu_drawer(driver);
         attendancePage = new AttendancePage(driver);

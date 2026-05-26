@@ -9,6 +9,10 @@ public class LeavePage {
     AndroidDriver driver;
     WebDriverWait wait;
 
+    @FindBy(xpath = "//android.widget.CheckedTextView[@resource-id=\"com.orange.payroll:id/design_menu_item_text\" and @text=\"Leaves\"]")
+    public WebElement NavigateLeaveModule;
+
+
     @FindBy(xpath = "//android.widget.TextView[@text=\"Leaves\"]")
     public WebElement LeaveTitle;
 
@@ -130,6 +134,32 @@ public class LeavePage {
     public WebElement LevelTwo;
 
     //--------------------Add Leave Application-------////
+
+    @FindBy(xpath = "//android.widget.TextView[@resource-id=\"android:id/text1\"]")
+    public WebElement SelectLeaveType;
+
+    @FindBy(xpath = "//android.widget.EditText[@resource-id=\"com.orange.payroll:id/input_dateTime\"]")
+    public WebElement Fromdate;
+
+    @FindBy(xpath = "//android.widget.EditText[@resource-id=\"com.orange.payroll:id/input_days\"]")
+    public WebElement InputPeriod;
+
+    @FindBy(xpath = "//android.widget.EditText[@resource-id=\"com.orange.payroll:id/input_ToDate\"]\n")
+    public WebElement Todate;
+
+    @FindBy(xpath = "//android.widget.EditText[@resource-id=\"com.orange.payroll:id/input_reason\"]")
+    public WebElement Inputreason;
+
+    @FindBy(xpath = "//android.widget.Button[@resource-id=\"com.orange.payroll:id/buttonSave\"]")
+    public WebElement Submittapplication;
+
+
+
+
+
+
+
+
 
 
 
