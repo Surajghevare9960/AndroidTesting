@@ -129,7 +129,7 @@ public class LeavePage {
     @FindBy(xpath = "(//android.widget.ImageView[@resource-id=\"com.orange.payroll:id/img_level\"])[2]")
     public WebElement LevelTwo;
 
-    //--------------------Add Leave Application-------//
+    //--------------------Add Leave Application-------////
 
 
 
