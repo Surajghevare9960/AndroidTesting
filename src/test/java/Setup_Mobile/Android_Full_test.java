@@ -24,7 +24,11 @@ public class Android_Full_test {
     public void befortest() throws Exception {
         DesiredCapabilities caps = new DesiredCapabilities();
         caps.setCapability("platformName", "Android");
+<<<<<<< HEAD
         caps.setCapability("appium:deviceName", "JFJVZ5P7O7ORCQIR");
+=======
+        caps.setCapability("appium:deviceName", "dd50591");
+>>>>>>> 92854ba838b9f5cee08e607af75af4ce3b9bc043
         caps.setCapability("appium:automationName", "UiAutomator2");
         caps.setCapability("appium:appPackage", "com.orange.payroll");
         caps.setCapability("appium:appActivity", "com.orange.payroll.Activity.SplashActivity");
@@ -32,6 +36,7 @@ public class Android_Full_test {
         caps.setCapability("appium:autoGrantPermissions", true);
         caps.setCapability("appium:noReset", true);
         caps.setCapability("appium:fullReset", false);
+<<<<<<< HEAD
       //  caps.setCapability("appium:newCommandTimeout", 300);
       //  caps.setCapability("appium:adbExecTimeout", 30000);
         caps.setCapability("appium:ignoreHiddenApiPolicyError", true); // For Real Device Use
@@ -39,6 +44,15 @@ public class Android_Full_test {
         // 🔧 Add these two lines for UiAutomator2 stability
      //   caps.setCapability("appium:uiautomator2ServerLaunchTimeout", 60000);
        // caps.setCapability("appium:uiautomator2ServerInstallTimeout", 60000);
+=======
+        caps.setCapability("appium:newCommandTimeout", 300);
+        caps.setCapability("appium:adbExecTimeout", 30000);
+        caps.setCapability("appium:ignoreHiddenApiPolicyError", true); // For Real Device Use
+
+        // 🔧 Add these two lines for UiAutomator2 stability
+        caps.setCapability("appium:uiautomator2ServerLaunchTimeout", 60000);
+        caps.setCapability("appium:uiautomator2ServerInstallTimeout", 60000);
+>>>>>>> 92854ba838b9f5cee08e607af75af4ce3b9bc043
 
         // Connect to Appium server
         driver = new AndroidDriver(new URL("http://127.0.0.1:4723/"), caps);

@@ -23,7 +23,11 @@ public class Android_Setup {
     public void befortest() throws Exception {
         DesiredCapabilities caps = new DesiredCapabilities();
         caps.setCapability("platformName", "Android");
+<<<<<<< HEAD
         caps.setCapability("appium:deviceName", "JFJVZ5P7O7ORCQIR");
+=======
+        caps.setCapability("appium:deviceName", "dd50591");
+>>>>>>> 92854ba838b9f5cee08e607af75af4ce3b9bc043
         caps.setCapability("appium:automationName", "UiAutomator2");
         caps.setCapability("appium:appPackage", "com.orange.payroll");
         caps.setCapability("appium:appActivity", "com.orange.payroll.Activity.SplashActivity");
