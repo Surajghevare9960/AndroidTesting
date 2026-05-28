@@ -8,26 +8,35 @@ import org.testng.annotations.Test;
 import pages.AttendancePage;
 import Reusable_methods.Menu_drawer;
 import pages.LoginPage;
+import utils.ConfigReader;
+import utils.ExcelUtils;
+
+import java.util.ArrayList;
+import java.util.List;
 
 public class AttendanceTest extends BaseTest {
 
     LoginPage loginPage;
     AttendancePage attendancePage;
     Menu_drawer menuDrawer;
+    ExcelUtils excel;
 
     @BeforeMethod
     public void initPages() {
-        //AndroidDriver driver = null;
-        loginPage = new LoginPage(driver);
-        menuDrawer = new Menu_drawer(driver);
+        loginPage      = new LoginPage(driver);
+        menuDrawer     = new Menu_drawer(driver);
         attendancePage = new AttendancePage(driver);
-
+        excel          = new ExcelUtils(ConfigReader.get("excel.output.path"));
     }
-    @Test
-    public void Initatetoattendace ()
-    {
+
+    @Test(priority = 1, description = "Login before attendance tests")
+    public void initiateLogin() {
         try {
-            loginPage.login("qamobile", "0065@suraj", "m5o0t5");
+            loginPage.login(
+                utils.ConfigReader.get("serverName"),
+                utils.ConfigReader.get("username"),
+                utils.ConfigReader.get("password")
+            );
         } catch (InterruptedException e) {
             throw new RuntimeException(e);
         }

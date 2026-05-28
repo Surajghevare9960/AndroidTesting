@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+
+<!--
+    HRMS Mobile Automation – Full Test Suite
+    ─────────────────────────────────────────
+    Reports generated after run:
+      • Extent Report  → test-output/ExtentReport/HRMS_Report_<timestamp>.html
+      • TestNG Report  → test-output/TestNGReport/HRMS_TestNG_Report.html
+      • Allure Results → allure-results/  (run: allure serve allure-results)
+      • Excel Report   → test-output/HRMS_TestReport.xlsx
+-->
+<suite name="HRMS_Full_Suite" verbose="1" parallel="none">
+
+    <!-- ================================================================
+         LISTENERS – auto-generate all reports
+    ================================================================ -->
+    <listeners>
+        <listener class-name="listeners.ExtentReportListener"/>
+        <listener class-name="listeners.TestNGReportListener"/>
+    </listeners>
+
+    <!-- ================================================================
+         GROUP 1 : Login
+    ================================================================ -->
+    <test name="Login_Tests">
+        <classes>
+            <class name="tests.LoginTest"/>
+        </classes>
+    </test>
+
+    <!-- ================================================================
+         GROUP 2 : Dashboard
+    ================================================================ -->
+    <test name="Dashboard_Tests">
+        <classes>
+            <class name="tests.DashboardTest"/>
+        </classes>
+    </test>
+
+    <!-- ================================================================
+         GROUP 3 : Attendance & Clocking
+    ================================================================ -->
+    <test name="Attendance_Clocking_Tests">
+        <classes>
+            <class name="tests.AttendanceTest"/>
+            <class name="tests.ClockingTest"/>
+            <class name="tests.MyTeamAttendanceTest"/>
+        </classes>
+    </test>
+
+    <!-- ================================================================
+         GROUP 4 : Leave
+    ================================================================ -->
+    <test name="Leave_Tests">
+        <classes>
+            <class name="tests.LeaveTest"/>
+        </classes>
+    </test>
+
+    <!-- ================================================================
+         GROUP 5 : Approvals
+    ================================================================ -->
+    <test name="Approvals_Tests">
+        <classes>
+            <class name="tests.ApprovalsTest"/>
+        </classes>
+    </test>
+
+    <!-- ================================================================
+         GROUP 6 : Travel & Claim
+    ================================================================ -->
+    <test name="Travel_Claim_Tests">
+        <classes>
+            <class name="tests.TravelTest"/>
+            <class name="tests.ClaimTest"/>
+        </classes>
+    </test>
+
+    <!-- ================================================================
+         GROUP 7 : Salary
+    ================================================================ -->
+    <test name="Salary_Tests">
+        <classes>
+            <class name="tests.SalaryTest"/>
+        </classes>
+    </test>
+
+    <!-- ================================================================
+         GROUP 8 : HR Modules
+    ================================================================ -->
+    <test name="HR_Module_Tests">
+        <classes>
+            <class name="tests.HolidayTest"/>
+            <class name="tests.BirthdayAnniversaryTest"/>
+            <class name="tests.TicketApplicationTest"/>
+            <class name="tests.SurveyTest"/>
+            <class name="tests.PolicyDocumentsTest"/>
+            <class name="tests.ExitApplicationTest"/>
+        </classes>
+    </test>
+
+    <!-- ================================================================
+         GROUP 9 : Settings
+    ================================================================ -->
+    <test name="Settings_Tests">
+        <classes>
+            <class name="tests.SettingsTest"/>
+        </classes>
+    </test>
+
+    <!-- ================================================================
+         GROUP 10 : DB Validation
+         Uncomment when DB is available and credentials are set in config.properties
+    ================================================================ -->
+    <!--
+    <test name="DB_Validation_Tests">
+        <classes>
+            <class name="tests.DBValidationTest"/>
+        </classes>
+    </test>
+    -->
+
+</suite>
